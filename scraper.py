@@ -50,6 +50,7 @@ for block in blocks:
 		else:
 			# create the right strings for the new filename
 			title = title.upper().strip()
+			print title
 			csvYr = title.split(' ')[-1]
 			csvMth = title.split(' ')[-2][:3]
 			csvMth = convert_mth_strings(csvMth);
