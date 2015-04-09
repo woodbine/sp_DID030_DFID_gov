@@ -30,7 +30,7 @@ for block in blocks:
 	link = block.a['href']
 
 	# add the right prefix onto the url
-	pageUrl = pageUrl.replace("/government","http://www.gov.uk/government")
+	pageUrl = link.replace("/government","http://www.gov.uk/government")
 	
 	html2 = urllib2.urlopen(pageUrl)
 	soup2 = BeautifulSoup(html2)
