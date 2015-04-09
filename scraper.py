@@ -11,7 +11,7 @@ url = "https://www.gov.uk/government/collections/monthly-spend-over-500-in-the-d
 
 # Set up functions
 def convert_mth_strings ( mth_string ):
-	month_numbers = {'Jan': '01', 'Feb': '02', 'Mar':'03', 'Apr':'04', 'May':'05', 'Jun':'06', 'Jul':'07', 'Aug':'08', 'Sep':'09','Oct':'10','Nov':'11','Dec':'12' }
+	month_numbers = {'JAN': '01', 'FEB': '02', 'MAR':'03', 'APR':'04', 'MAY':'05', 'JUN':'06', 'JUL':'07', 'AUG':'08', 'SEP':'09','OCT':'10','NOV':'11','DEC':'12' }
 	#loop through the months in our dictionary
 	for k, v in month_numbers.items():
 		#then replace the word with the number
@@ -49,7 +49,7 @@ for block in blocks:
 			print 'not a csv'
 		else:
 			# create the right strings for the new filename
-			title = title.strip()
+			title = title.upper().strip()
 			csvYr = title.split(' ')[-1]
 			csvMth = title.split(' ')[-2][:3]
 			csvMth = convert_mth_strings(csvMth);
