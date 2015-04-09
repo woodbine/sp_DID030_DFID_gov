@@ -6,8 +6,8 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 
 # Set up variables
-entity_id = "DES022_DFE_gov"
-url = "https://www.gov.uk/government/collections/dfe-department-and-executive-agency-spend-over-25-000"
+entity_id = "DID030_DFID_gov"
+url = "https://www.gov.uk/government/collections/monthly-spend-over-500-in-the-department-for-international-development"
 
 # Set up functions
 def convert_mth_strings ( mth_string ):
@@ -30,7 +30,6 @@ for block in blocks:
 	link = block.a['href']
 
 	# add the right prefix onto the url
-	pageUrl = link.replace("/preview","")
 	pageUrl = pageUrl.replace("/government","http://www.gov.uk/government")
 	
 	html2 = urllib2.urlopen(pageUrl)
